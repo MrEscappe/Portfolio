@@ -1,0 +1,178 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Style from the page */
+
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap");
+
+:root {
+	--background-color: black;
+	--text-color: #f6f6f6;
+	--link-color: #22d4fd;
+	--title-color: #22d4fd;
+	--footer-bg-color: #22d4fd;
+	--footer-text-color: #272727;
+	--font-family-krona: "Krona One", sans-serif;
+	--font-family-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	box-sizing: border-box;
+}
+
+header {
+	padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+	display: flex;
+	gap: 80px;
+}
+
+.menu_link {
+	color: var(--link-color);
+	font-family: var(--font-family-montserrat);
+	font-weight: 600;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.titulo-destaque {
+	color: var(--title-color);
+}
+
+.apresentacao {
+	padding: 5% 15%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.container {
+	width: 615px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.container__title {
+	font-size: 36px;
+	font-family: var(--font-family-krona);
+}
+
+.container__texto {
+	font-size: 24px;
+	font-family: var(--font-family-montserrat);
+}
+
+.container__btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+}
+
+.container__btn__subtitulo {
+	font-family: var(--font-family-krona);
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.btn {
+	/* background-color: var(--link-color); */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border: 2px solid var(--link-color);
+	text-align: center;
+	border-radius: 8px;
+	width: 378px;
+	padding: 21.5px 0;
+	font-size: 24px;
+	text-decoration: none;
+	color: var(--text-color);
+	font-family: var(--font-family-montserrat);
+	font-weight: 600;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: #272727;
+}
+
+footer {
+	display: flex;
+	background-color: var(--footer-bg-color);
+	color: var(--footer-text-color);
+	padding: 24px;
+	justify-content: center;
+	text-align: center;
+	font-size: 24px;
+	font-family: var(--font-family-montserrat);
+	font-weight: 400;
+}
